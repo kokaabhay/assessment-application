@@ -52,7 +52,7 @@ embedding_client = AzureOpenAI(
     api_version=AZURE_OPENAI_API_VERSION,
 )
 
-router2 = APIRouter(tags=["API"])
+router2 = APIRouter(tags=["Chunking and Embedding"])
 
 
 @router2.post("/documents/chunk/{document_id}")
