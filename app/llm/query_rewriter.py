@@ -1,6 +1,7 @@
 # Necessary imports
 from openai import OpenAI
 import logging
+logger = logging.getLogger(__name__)
 from tenacity import retry, stop_after_attempt, wait_fixed
 from config import (
     AZURE_CHAT_DEPLOYMENT,
@@ -52,11 +53,11 @@ def get_rewritten_query(query: str) -> str:
     try:
         return rewrite_query(query)
     except Exception as e:
-        print(str(e))
-        print("Query Re-Writing has Failed probably due to LLM API failure: \n")
-        print("=" * 60, "\n")
-        print(
+        logger.error(str(e))
+        logger.error("Query Re-Writing has Failed probably due to LLM API failure:")
+        logger.error("=" * 60)
+        logger.info(
             "Proceeding with empty Re-Written query and user query will be used as default"
         )
-        print("=" * 60)
+        logger.info("=" * 60)
         return ""

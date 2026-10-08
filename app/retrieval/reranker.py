@@ -2,6 +2,7 @@
 import certifi
 import httpx
 import logging
+logger = logging.getLogger(__name__)
 from config import (
     AZURE_RERANK_ENDPOINT,
     AZURE_RERANK_API_KEY,
@@ -61,11 +62,13 @@ def rerank_documents(
             #     print(i)
         return reranked_documents
     except Exception as e:
-        print(str(e))
-        print("Reranker not responding probably due to LLM API failure: \n")
-        print("=" * 60, "\n")
-        print("Proceeding to build prompt phase without reranking documents")
-        print("=" * 60)
+        logger.error(str(e))
+        logger.error("Reranker not responding probably due to LLM API failure:")
+        logger.error("=" * 60)
+        logger.info("Proceeding to build prompt phase without reranking documents")
+        logger.info("=" * 60)
+
         for document in documents:
             document["rerank_score"] = None
+
         return documents

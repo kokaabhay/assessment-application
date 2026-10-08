@@ -48,18 +48,19 @@ def response(response_object: Response_Object):
         orchestrator = Orchestrator()
         rewritten_query = get_rewritten_query(query)
         decision = orchestrator.get_decision(query, rewritten_query)
-        print("\nOriginal query:")
-        print(query)
 
-        print("\nRewritten query:")
-        print(rewritten_query)
+        logger.info("\nOriginal query:")
+        logger.info(query)
+
+        logger.info("\nRewritten query:")
+        logger.info(rewritten_query)
 
         hypothetical_answer = get_hypothetical_answer(rewritten_query, query)
-        print("\nHypothetical answer:")
-        print(hypothetical_answer)
+        logger.info("\nHypothetical answer:")
+        logger.info(hypothetical_answer)
 
         documents = hybrid_search(query, rewritten_query, decision["documents"])
-        print(f"\nRetrieved {len(documents)} documents.")
+        logger.info(f"\nRetrieved {len(documents)} documents.")
 
         h_documents = (
             hyde_retrieval(hypothetical_answer, decision["documents"])
@@ -77,19 +78,19 @@ def response(response_object: Response_Object):
 
         context_documents = build_context(reranked_documents)
         # print("context documents: ",context_documents)
-        print("\nReranked documents:\n")
+        logger.info("\nReranked documents:\n")
 
         for i, document in enumerate(
             reranked_documents,
             start=1,
         ):
-            print(f"--- Result {i} ---")
-            print(f"Source: {document['source']}")
-            print(f"Search score: {document['score']}")
+            logger.info(f"--- Result {i} ---")
+            logger.info(f"Source: {document['source']}")
+            logger.info(f"Search score: {document['score']}")
             if document["rerank_score"]:
-                print(f"Rerank score: {document['rerank_score']}")
-            print(document["content"][:500])
-            print()
+                logger.info(f"Rerank score: {document['rerank_score']}")
+            logger.info(document["content"][:500])
+            logger.info("")
 
         reranked_h_documents = rerank_documents(
             query=query,
@@ -102,6 +103,7 @@ def response(response_object: Response_Object):
         rewritten_query = ""
         context_documents = []
         reranked_h_documents = []
+
     prompt = build_prompt(
         query=query,
         documents=context_documents,
@@ -110,10 +112,10 @@ def response(response_object: Response_Object):
 
     answer = get_answer(prompt)
 
-    print("\n" + "=" * 60)
-    print("FINAL ANSWER")
-    print("=" * 60)
-    print(answer)
+    logger.info("\n" + "=" * 60)
+    logger.info("FINAL ANSWER")
+    logger.info("=" * 60)
+    logger.info(answer)
     if rewritten_query:
         return (
             "Re-written query is : "

@@ -6,7 +6,8 @@ from config import (
     AZURE_OPENAI_API_KEY,
     AZURE_OPENAI_ENDPOINT,
 )
-
+import logging
+logger = logging.getLogger(__name__)
 # create the client to talk to your Azure OpenAI resource.
 client = OpenAI(
     base_url=f"{AZURE_OPENAI_ENDPOINT.rstrip('/')}/openai/v1/",
@@ -53,11 +54,11 @@ def get_hypothetical_answer(rewritten_query: str, query) -> str:
     try:
         return generate_hypothetical_answer(rewritten_query, query)
     except Exception as e:
-        print(str(e))
-        print(
-            "Hypothetical answer generator not responding probably due to LLM API failure: \n"
+        logger.error(str(e))
+        logger.error(
+            "Hypothetical answer generator not responding probably due to LLM API failure:"
         )
-        print("=" * 60, "\n")
-        print("Proceeding without hypothetical answer")
-        print("=" * 60)
+        logger.error("=" * 60)
+        logger.info("Proceeding without hypothetical answer")
+        logger.info("=" * 60)
         return None

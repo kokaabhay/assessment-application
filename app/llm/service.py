@@ -6,7 +6,8 @@ from config import (
     AZURE_OPENAI_API_KEY,
     AZURE_OPENAI_ENDPOINT,
 )
-
+import logging
+logger = logging.getLogger(__name__)
 # create the client to talk to your Azure OpenAI resource.
 client = OpenAI(
     base_url=f"{AZURE_OPENAI_ENDPOINT.rstrip('/')}/openai/v1/",
@@ -44,11 +45,11 @@ def get_answer(prompt: str) -> str:
         return generate_answer(prompt)
 
     except Exception as e:
-        print(str(e))
-        print("LLM not responding probably due to LLM API failure:")
-        print("=" * 60)
-        print("Proceeding with default response to user")
-        print("=" * 60)
+        logger.error(str(e))
+        logger.error("LLM not responding probably due to LLM API failure:")
+        logger.error("=" * 60)
+        logger.info("Proceeding with default response to user")
+        logger.info("=" * 60)
 
         return (
             "OOOPS! Sorry, our customer support agent is currently "

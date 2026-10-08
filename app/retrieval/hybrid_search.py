@@ -2,6 +2,8 @@
 from azure.core.credentials import AzureKeyCredential
 from azure.search.documents import SearchClient
 from azure.search.documents.models import VectorizedQuery
+import logging
+logger = logging.getLogger(__name__)
 from openai import OpenAI
 from config import (
     AZURE_SEARCH_ENDPOINT,

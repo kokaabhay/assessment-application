@@ -5,6 +5,8 @@ from config import (
     AZURE_OPENAI_API_KEY,
     AZURE_OPENAI_ENDPOINT,
 )
+import logging
+logger = logging.getLogger(__name__)
 from tenacity import retry, wait_fixed, stop_after_attempt
 
 # create the client to talk to your Azure OpenAI resource.
@@ -52,9 +54,11 @@ def get_retrieval_decision(prompt: str) -> bool:
     try:
         return decide_retrieve(prompt)
     except Exception as e:
-        print(str(e))
-        print("unable to get retrieval decision probably due to LLM API failure  : \n")
-        print("=" * 60, "\n")
-        print("Proceeding initiate retrieval process by default")
-        print("=" * 60)
+        logger.error(str(e))
+        logger.error(
+            "Unable to get retrieval decision probably due to LLM API failure:"
+        )
+        logger.error("=" * 60)
+        logger.info("Proceeding initiate retrieval process by default")
+        logger.info("=" * 60)
         return True

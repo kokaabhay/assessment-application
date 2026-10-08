@@ -4,7 +4,6 @@ import json
 from tenacity import retry, wait_fixed, stop_after_attempt
 from openai import OpenAI
 import logging
-
 logger = logging.getLogger(__name__)
 from config import (
     AZURE_CHAT_DEPLOYMENT,
@@ -120,13 +119,13 @@ class Orchestrator:
         try:
             return self.orchestrate(user_query, rewritten_query)
         except Exception as e:
-            print(str(e))
-            print("Orchestrator not responding probably due to LLM API failure: \n")
-            print("=" * 60, "\n")
-            print(
+            logger.error(str(e))
+            logger.error("Orchestrator not responding probably due to LLM API failure:")
+            logger.error("=" * 60)
+            logger.info(
                 "Proceeding to build retrieval phase with both retrieval documents in pipeline"
             )
-            print("=" * 60)
+            logger.info("=" * 60)
             return {
                 "documents": "both",
                 "reason": "The orchestrator failed so considering both documents for maximum context",
