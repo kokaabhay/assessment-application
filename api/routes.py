@@ -44,9 +44,9 @@ def response(response_object: Response_Object):
         )
     k = get_retrieval_decision(query)
     # print(k)
-    if k=="None":
+    if k == "None":
         return "This content is not permissible for processing by our regulations"
-    if k=="True":
+    if k == "True":
         orchestrator = Orchestrator()
         rewritten_query = get_rewritten_query(query)
         decision = orchestrator.get_decision(query, rewritten_query)
@@ -64,11 +64,7 @@ def response(response_object: Response_Object):
         documents = hybrid_search(query, rewritten_query)
         logger.info(f"\nRetrieved {len(documents)} documents.")
 
-        h_documents = (
-            hyde_retrieval(hypothetical_answer)
-            if hypothetical_answer
-            else []
-        )
+        h_documents = hyde_retrieval(hypothetical_answer) if hypothetical_answer else []
 
         # for i in documents:
         #     print(i)
@@ -111,9 +107,9 @@ def response(response_object: Response_Object):
         documents=context_documents,
         h_documents=reranked_h_documents,
     )
-    
-    answer = get_answer(prompt,decision["deployment"])
-    logger.info(decision["deployment"],decision["reason"])
+
+    answer = get_answer(prompt, decision["deployment"])
+    logger.info(decision["deployment"], decision["reason"])
     logger.info("\n" + "=" * 60)
     logger.info("FINAL ANSWER")
     logger.info("=" * 60)

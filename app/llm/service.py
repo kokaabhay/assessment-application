@@ -7,6 +7,7 @@ from config import (
 )
 import logging
 from langchain_core.prompts import PromptTemplate
+
 logger = logging.getLogger(__name__)
 # create the client to talk to your Azure OpenAI resource.
 client = OpenAI(
@@ -16,8 +17,8 @@ client = OpenAI(
 
 
 # Generates the final LLM Response to be replied to the end user asking the question
-def generate_answer(prompt: str,d) -> str:
-    
+def generate_answer(prompt: str, d) -> str:
+
     response = client.chat.completions.create(
         model=d,
         messages=[
@@ -39,9 +40,9 @@ def generate_answer(prompt: str,d) -> str:
 
 
 # This function will call the generate_answer function and in case of failure ensures a working fallback
-def get_answer(prompt: str,d) -> str:
+def get_answer(prompt: str, d) -> str:
     try:
-        return generate_answer(prompt,d)
+        return generate_answer(prompt, d)
 
     except Exception as e:
         logger.error(str(e))

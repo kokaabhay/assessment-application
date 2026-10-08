@@ -1,6 +1,7 @@
 # Necessary imports
 from openai import OpenAI
 import logging
+
 logger = logging.getLogger(__name__)
 
 from config import (

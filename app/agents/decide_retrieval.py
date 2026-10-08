@@ -49,7 +49,7 @@ def decide_retrieve(prompt: str) -> bool:
     )
 
     result = response.choices[0].message.content.strip()
-    return result 
+    return result
 
 
 # This function will call the decide_retrieve function and in case of failure ensures a working fallback

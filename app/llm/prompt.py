@@ -3,6 +3,7 @@ import tiktoken
 from typing import Optional
 from config import MAX_CONTEXT_TOKENS
 from langchain_core.prompts import PromptTemplate
+
 # cl100k_base is a tokenizer commonly associated with OpenAI
 # create tokenizer using tiktoken
 encoding = tiktoken.get_encoding("cl100k_base")
@@ -29,7 +30,6 @@ def build_context(documents: list[dict]) -> list[dict]:
         selected_documents.append(document)
         total_tokens += token_count
     return selected_documents
-
 
 
 PROMPT_TEMPLATE = PromptTemplate.from_template("""
@@ -67,6 +67,7 @@ Instructions:
 - When possible, mention the source document on a new line as well.
 """.strip())
 
+
 def build_prompt(
     query: str,
     documents: list[dict] | None,
@@ -79,15 +80,13 @@ def build_prompt(
     if documents:
         for i, document in enumerate(documents, start=1):
             context_parts.append(
-                f"[Source {i}: {document['source']}]\n"
-                f"{document['content']}"
+                f"[Source {i}: {document['source']}]\n" f"{document['content']}"
             )
 
     if h_documents:
         for i, document in enumerate(h_documents, start=1):
             hyde_context_parts.append(
-                f"[Source {i}: {document['source']}]\n"
-                f"{document['content']}"
+                f"[Source {i}: {document['source']}]\n" f"{document['content']}"
             )
 
     context = "\n\n".join(context_parts)

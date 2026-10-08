@@ -18,8 +18,6 @@ client = OpenAI(
 )
 
 
-
-
 # Orchestrator class
 class Orchestrator:
     def __init__(self):
