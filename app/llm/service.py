@@ -1,13 +1,12 @@
 # Necessary imports
 from openai import OpenAI
-from tenacity import retry, stop_after_attempt, wait_fixed
 from config import (
     AZURE_CHAT_DEPLOYMENT,
     AZURE_OPENAI_API_KEY,
     AZURE_OPENAI_ENDPOINT,
 )
 import logging
-
+from langchain_core.prompts import PromptTemplate
 logger = logging.getLogger(__name__)
 # create the client to talk to your Azure OpenAI resource.
 client = OpenAI(
@@ -17,8 +16,6 @@ client = OpenAI(
 
 
 # Generates the final LLM Response to be replied to the end user asking the question
-# Tries 1 times with a delay of 10 seconds between each attempt
-# @retry(stop_after_attempt(1),wait_fixed(10))
 def generate_answer(prompt: str) -> str:
     response = client.chat.completions.create(
         model=AZURE_CHAT_DEPLOYMENT,

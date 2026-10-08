@@ -1,6 +1,5 @@
 # Necessary imports
 from openai import OpenAI
-from tenacity import retry, stop_after_attempt, wait_fixed
 from config import (
     AZURE_CHAT_DEPLOYMENT,
     AZURE_OPENAI_API_KEY,
@@ -17,8 +16,6 @@ client = OpenAI(
 
 
 # Generate a hypothetical answer and then use this answer for better quality retrieval only based on vector search
-# Tries 1 times with a delay of 10 seconds between each attempt
-# @retry(stop_after_attempt(1),wait_fixed(10))
 def generate_hypothetical_answer(rewritten_query: str, query: str) -> str:
     """
     Generate a hypothetical answer to the user's question into a concise search reference

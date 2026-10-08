@@ -33,3 +33,5 @@ black
 pypdf 
 python-docx 
 openpyxl
+langchain_core
+langchain-openai

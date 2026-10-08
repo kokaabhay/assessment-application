@@ -1,9 +1,8 @@
 # Necessary imports
 from openai import OpenAI
 import logging
-
 logger = logging.getLogger(__name__)
-from tenacity import retry, stop_after_attempt, wait_fixed
+
 from config import (
     AZURE_CHAT_DEPLOYMENT,
     AZURE_OPENAI_API_KEY,
@@ -18,8 +17,6 @@ client = OpenAI(
 
 
 # This function rewites the user query for better vector / keyword based retrieval
-# Tries 1 times with a delay of 10 seconds between each attempt
-# @retry(stop_after_attempt(1),wait_fixed(10))
 def rewrite_query(query: str) -> str:
     """
     Rewrite a user's question into a concise search query

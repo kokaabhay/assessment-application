@@ -1,7 +1,6 @@
 # Necessary imports
 from openai import AzureOpenAI
 import json
-from tenacity import retry, wait_fixed, stop_after_attempt
 from openai import OpenAI
 import logging
 
@@ -101,8 +100,6 @@ class Orchestrator:
         return system_prompt
 
     # This function will decide which of the 2 knowledge-bases (Documents) or both should be included for retrieval based on the user and rewitten-query
-    # Tries 1 times with a delay of 10 seconds between each attempt
-    # @retry(stop_after_attempt(1),wait_fixed(10))
     def orchestrate(self, user_query: str, rewritten_query: str) -> dict:
         tools = []
         system_prompt = self.build_orchestrator_prompt(user_query, rewritten_query)
