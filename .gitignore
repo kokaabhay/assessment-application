@@ -1,0 +1,15 @@
+# .pyc files 
+__pycache__/
+*.pyc
+
+#virtual environment
+.venv/
+venv/
+
+#environment file
+.env
+.vscode/
+.idea/
+
+#testing
+.pytest_cache/
