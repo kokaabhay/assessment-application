@@ -61,11 +61,11 @@ def response(response_object: Response_Object):
         logger.info("\nHypothetical answer:")
         logger.info(hypothetical_answer)
 
-        documents = hybrid_search(query, rewritten_query, decision["documents"])
+        documents = hybrid_search(query, rewritten_query)
         logger.info(f"\nRetrieved {len(documents)} documents.")
 
         h_documents = (
-            hyde_retrieval(hypothetical_answer, decision["documents"])
+            hyde_retrieval(hypothetical_answer)
             if hypothetical_answer
             else []
         )
@@ -111,9 +111,9 @@ def response(response_object: Response_Object):
         documents=context_documents,
         h_documents=reranked_h_documents,
     )
-
-    answer = get_answer(prompt)
-
+    
+    answer = get_answer(prompt,decision["deployment"])
+    logger.info(decision["deployment"],decision["reason"])
     logger.info("\n" + "=" * 60)
     logger.info("FINAL ANSWER")
     logger.info("=" * 60)
@@ -124,8 +124,9 @@ def response(response_object: Response_Object):
             + rewritten_query
             + "\n\nHypothetical answer:"
             + hypothetical_answer
-            # + "\n\nReason: "
-            # + decision["reason"]
+            + "\n\nReason: "
+            + decision["deployment"]
+            + decision["reason"]
             + " \n\n LLM response is :"
             + answer
         )

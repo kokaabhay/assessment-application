@@ -16,9 +16,10 @@ client = OpenAI(
 
 
 # Generates the final LLM Response to be replied to the end user asking the question
-def generate_answer(prompt: str) -> str:
+def generate_answer(prompt: str,d) -> str:
+    
     response = client.chat.completions.create(
-        model=AZURE_CHAT_DEPLOYMENT,
+        model=d,
         messages=[
             {
                 "role": "system",
@@ -38,9 +39,9 @@ def generate_answer(prompt: str) -> str:
 
 
 # This function will call the generate_answer function and in case of failure ensures a working fallback
-def get_answer(prompt: str) -> str:
+def get_answer(prompt: str,d) -> str:
     try:
-        return generate_answer(prompt)
+        return generate_answer(prompt,d)
 
     except Exception as e:
         logger.error(str(e))

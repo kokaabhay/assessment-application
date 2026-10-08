@@ -17,18 +17,7 @@ client = OpenAI(
     api_key=AZURE_OPENAI_API_KEY,
 )
 
-AGENTS = {
-    "rag_agent": {
-        "description": "Answers questions using the company's knowledge base."
-        # },
-        # "order_agent": {
-        #     "description": "Checks order status and order information."
-        # },
-        # "support_agent": {
-        #     "description": "Handles general customer support conversations."
-        # }
-    }
-}
+
 
 
 # Orchestrator class
@@ -39,57 +28,35 @@ class Orchestrator:
     # This function defines the prompt template for orchestration
     def build_orchestrator_prompt(self, user_query: str, rewritten_query: str) -> str:
         system_prompt = f"""
-                You are the orchestrator of a customer-support agentic AI system.
+                You are the Model Router agentic AI system.
                 Your job is NOT to answer the user's question directly.
                 Your job is to decide which knowledge base should be used
                 to retrieve information for answering the user's question.
                 You will be given the user's query and then the rewritten query as well.
                 The rewritten query is a re-written query by the "LLm" of the original user's query
-        
-                There are two knowledge bases.
-        
-                DOCUMENT 1:
-                This document provides customer support representatives with
-                information and standard responses for common customer questions
-                and issues.
-        
-                It primarily covers:
-                - hardware
-                - Wi-Fi
-                - device pairing
-                - common troubleshooting
-                - standard customer support issues
-        
-                DOCUMENT 2:
-                This document focuses on:
-                - account management
-                - household access
-                - service configuration
-                - device ownership
-                - notifications
-                - customer data requests
-        
-                It is intended for situations that are different from
-                hardware, Wi-Fi, and device-pairing troubleshooting.
-        
-                Your task is to determine whether the user's question requires
-                information from document 1, document 2, or both.
+                
+                
         
                 Return ONLY valid JSON.
         
                 The JSON format must be:
         
                 {{
-                    "documents": "1",
-                    "reason": "Explain why this document was selected."
+                    "deployment": "gpt-5-nano",
+                    "reason": "Explain why this model was selected."
                 }}
+
+                OR
+
+                {{
+                    "deployment": "gpt-4.1",
+                    "reason": "Explain why this document was selected."
+                        }}
         
                 The "documents" field MUST contain exactly one of:
         
-                "1"
-                "2"
-                "both"
-        
+                "gpt-4.1"
+                "gpt-5-nano"
                 Do not answer the user's question.
         
                 user query:
