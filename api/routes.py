@@ -44,7 +44,9 @@ def response(response_object: Response_Object):
         )
     k = get_retrieval_decision(query)
     # print(k)
-    if k:
+    if k=="None":
+        return "This content is not permissible for processing by our regulations"
+    if k=="True":
         orchestrator = Orchestrator()
         rewritten_query = get_rewritten_query(query)
         decision = orchestrator.get_decision(query, rewritten_query)
