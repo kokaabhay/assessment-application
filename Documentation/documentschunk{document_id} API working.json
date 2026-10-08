@@ -1,0 +1,811 @@
+{
+  "status": "completed",
+  "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+  "chunk_count": 89,
+  "chunk_size": 80,
+  "chunk_overlap": 20,
+  "strategy": "paragraph_based",
+  "chunks": [
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0000",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 0,
+      "content": "Employee Benefits & Insurance Guide\nNorthstar Digital Services Pvt. Ltd. | HR-BE",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0001",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 1,
+      "content": "es Pvt. Ltd. | HR-BEN-2026 | Page 1 of 6\nBenefits Overview\nThis guide summarizes",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0002",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 2,
+      "content": "his guide summarizes the core employee benefits offered by Northstar Digital Ser",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0003",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 3,
+      "content": "orthstar Digital Services Pvt. Ltd. It is a\nsample knowledge-base document inten",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0004",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 4,
+      "content": "-base document intended to support questions about insurance, wellbeing, retirem",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0005",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 5,
+      "content": ", wellbeing, retirement, and\nreimbursements.\nEligibility normally begins on the ",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0006",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 6,
+      "content": "mally begins on the employee's date of joining for regular full-time employees. ",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0007",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 7,
+      "content": "ull-time employees. Coverage for\ndependants varies by plan. The insurer's policy",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0008",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 8,
+      "content": "The insurer's policy wording and applicable law govern if there is any conflict ",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0009",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 9,
+      "content": "ere is any conflict with\nthis summary.\nEmployees must keep beneficiary and depen",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0010",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 10,
+      "content": "eneficiary and dependant information current in the HR portal. Changes caused by",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0011",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 11,
+      "content": "l. Changes caused by\nmarriage, birth, adoption, or loss of other coverage should",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0012",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 12,
+      "content": "ther coverage should be reported within 30 calendar days.",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0013",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 13,
+      "content": "Employee Benefits & Insurance Guide\nNorthstar Digital Services Pvt. Ltd. | HR-BE",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0014",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 14,
+      "content": "es Pvt. Ltd. | HR-BEN-2026 | Page 2 of 6\nGroup Health Insurance\nThe standard gro",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0015",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 15,
+      "content": "nce\nThe standard group medical plan provides an annual family floater sum insure",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0016",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 16,
+      "content": "y floater sum insured of INR 5,00,000 for the\nemployee, spouse or registered par",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0017",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 17,
+      "content": "se or registered partner, and up to two dependent children. Parent coverage may ",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0018",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 18,
+      "content": "Parent coverage may be offered\nas an employee-paid optional add-on during the an",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0019",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 19,
+      "content": "add-on during the annual enrollment window.\nHospitalization is generally covered",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0020",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 20,
+      "content": "is generally covered when medically necessary and subject to insurer terms. Pre-",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0021",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 21,
+      "content": " insurer terms. Pre-existing\nconditions are covered from day one under the curre",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0022",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 22,
+      "content": " one under the current corporate plan, subject to policy exclusions and\nnetwork ",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0023",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 23,
+      "content": "lusions and\nnetwork rules.\nFor planned hospitalization, employees should request",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0024",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 24,
+      "content": "oyees should request cashless pre-authorization when using a network\nhospital. F",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0025",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 25,
+      "content": " network\nhospital. For emergency hospitalization, the employee or family member ",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0026",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 26,
+      "content": "ee or family member should inform the third-party\nadministrator as soon as reaso",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0027",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 27,
+      "content": "tor as soon as reasonably possible.\nItem\nStandard rule\nFamily floater\nINR 5,00,0",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0028",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 28,
+      "content": "y floater\nINR 5,00,000\nPre-existing conditions\nCovered from day one, subject to ",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0029",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 29,
+      "content": "day one, subject to plan terms\nNetwork hospital\nCashless pre-authorization recom",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0030",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 30,
+      "content": "-authorization recommended",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0031",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 31,
+      "content": "Employee Benefits & Insurance Guide\nNorthstar Digital Services Pvt. Ltd. | HR-BE",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0032",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 32,
+      "content": "es Pvt. Ltd. | HR-BEN-2026 | Page 3 of 6\nTerm Life and Personal Accident\nEligibl",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0033",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 33,
+      "content": "nal Accident\nEligible employees receive employer-paid group term life insurance ",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0034",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 34,
+      "content": "term life insurance equal to two times annual fixed pay,\nsubject to a minimum co",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0035",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 35,
+      "content": "ject to a minimum cover of INR 10,00,000 and maximum cover of INR 1,00,00,000 un",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0036",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 36,
+      "content": "f INR 1,00,00,000 under the current plan.\nThe group personal accident policy pro",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0037",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 37,
+      "content": " accident policy provides coverage for accidental death and specified permanent ",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0038",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 38,
+      "content": "specified permanent or\ntemporary disabilities, subject to the insurer's schedule",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0039",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 39,
+      "content": "e insurer's schedule of benefits.\nEmployees should nominate beneficiaries in the",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0040",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 40,
+      "content": "beneficiaries in the HR portal. Claim notifications should be submitted promptly",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0041",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 41,
+      "content": "e submitted promptly\nwith the required supporting documents. People Operations c",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0042",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 42,
+      "content": " People Operations can help the family coordinate with the insurer\nbut cannot gu",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0043",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 43,
+      "content": "nsurer\nbut cannot guarantee claim acceptance.",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0044",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 44,
+      "content": "Employee Benefits & Insurance Guide\nNorthstar Digital Services Pvt. Ltd. | HR-BE",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0045",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 45,
+      "content": "es Pvt. Ltd. | HR-BEN-2026 | Page 4 of 6\nMental Health and Wellbeing\nThe Employe",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0046",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 46,
+      "content": "ellbeing\nThe Employee Assistance Program provides confidential counselling suppo",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0047",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 47,
+      "content": "al counselling support through an external provider.\nEmployees may access up to ",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0048",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 48,
+      "content": "es may access up to six counselling sessions per concern per policy year without",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0049",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 49,
+      "content": " policy year without charge under the\nstandard program.\nThe wellness reimburseme",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0050",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 50,
+      "content": "wellness reimbursement provides up to INR 12,000 per financial year for eligible",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0051",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 51,
+      "content": "al year for eligible expenses such as gym\nmembership, fitness classes, sports fe",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0052",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 52,
+      "content": "s classes, sports fees, meditation applications, or ergonomic wellness items, su",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0053",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 53,
+      "content": "c wellness items, subject to\nreceipt and category rules.\nManagers should not req",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0054",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 54,
+      "content": "agers should not request diagnostic details from employees using counselling or ",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0055",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 55,
+      "content": "sing counselling or wellbeing benefits.\nEmergency mental-health situations shoul",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0056",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 56,
+      "content": "lth situations should be directed to local emergency services or appropriate cli",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0057",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 57,
+      "content": "s or appropriate clinical\ncare rather than handled solely through the EAP.",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0058",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 58,
+      "content": "rough the EAP.",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0059",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 59,
+      "content": "Employee Benefits & Insurance Guide\nNorthstar Digital Services Pvt. Ltd. | HR-BE",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0060",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 60,
+      "content": "es Pvt. Ltd. | HR-BEN-2026 | Page 5 of 6\nRetirement, Gratuity and Leave Encashme",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0061",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 61,
+      "content": "y and Leave Encashment\nProvident Fund contributions are administered according t",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0062",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 62,
+      "content": "nistered according to applicable law and the employee's eligible wage\ncomponents",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0063",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 63,
+      "content": "ible wage\ncomponents. Employees should verify universal account number details a",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0064",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 64,
+      "content": "unt number details and complete required declarations\nin the onboarding process.",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0065",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 65,
+      "content": " onboarding process.\nGratuity eligibility and payment follow applicable law. The",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0066",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 66,
+      "content": " applicable law. The benefit is normally payable after the legally\nrequired cont",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0067",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 67,
+      "content": "egally\nrequired continuous-service period unless a statutory exception applies.\n",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0068",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 68,
+      "content": " exception applies.\nOn separation, unused annual leave may be encashed where req",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0069",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 69,
+      "content": "e encashed where required by law or company policy. Sick leave\nand special leave",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0070",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 70,
+      "content": "ve\nand special leave are not normally encashable. Final settlement timing depend",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0071",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 71,
+      "content": "lement timing depends on payroll cut-off, asset\nclearance, statutory requirement",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0072",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 72,
+      "content": "tatutory requirements, and completion of exit formalities.",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0073",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 73,
+      "content": "Employee Benefits & Insurance Guide\nNorthstar Digital Services Pvt. Ltd. | HR-BE",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0074",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 74,
+      "content": "es Pvt. Ltd. | HR-BEN-2026 | Page 6 of 6\nClaims, Support and Frequently Asked Qu",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0075",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 75,
+      "content": " Frequently Asked Questions\nMedical claim documents should normally be submitted",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0076",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 76,
+      "content": "ormally be submitted within the insurer's deadline. Typical reimbursement\ndocume",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0077",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 77,
+      "content": "reimbursement\ndocuments include claim form, discharge summary, itemized bills, p",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0078",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 78,
+      "content": "y, itemized bills, prescriptions, investigation reports, and\npayment receipts.\nF",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0079",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 79,
+      "content": "\npayment receipts.\nFAQ: Is dental treatment covered? Routine dental treatment is",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0080",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 80,
+      "content": " dental treatment is not covered under the standard hospitalization\nplan unless ",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0081",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 81,
+      "content": "ization\nplan unless required because of a covered accident or specifically inclu",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0082",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 82,
+      "content": "r specifically included by the insurer. FAQ: Can I add\nparents mid-year? Parent ",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0083",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 83,
+      "content": "ts mid-year? Parent enrollment is normally permitted only during the enrollment ",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0084",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 84,
+      "content": "ring the enrollment window or a qualifying\nlife event if the plan allows it.\nFor",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0085",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 85,
+      "content": " plan allows it.\nFor support, employees should use the Benefits tile in the HR p",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0086",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 86,
+      "content": "its tile in the HR portal. Suggested metadata:\ncategory=benefits; subcategory=in",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0087",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 87,
+      "content": "fits; subcategory=insurance; policy_id=HR-BEN-2026; effective_date=2026-04-01;\na",
+      "document_type": "HR",
+      "category": "HR Policy"
+    },
+    {
+      "chunk_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039_chunk_0088",
+      "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+      "source_file": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt",
+      "chunk_index": 88,
+      "content": "e_date=2026-04-01;\naudience=all-employees.",
+      "document_type": "HR",
+      "category": "HR Policy"
+    }
+  ]
+}

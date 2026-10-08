@@ -2,6 +2,7 @@
 import certifi
 import httpx
 import logging
+
 logger = logging.getLogger(__name__)
 from config import (
     AZURE_RERANK_ENDPOINT,

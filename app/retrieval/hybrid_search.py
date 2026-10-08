@@ -3,6 +3,7 @@ from azure.core.credentials import AzureKeyCredential
 from azure.search.documents import SearchClient
 from azure.search.documents.models import VectorizedQuery
 import logging
+
 logger = logging.getLogger(__name__)
 from openai import OpenAI
 from config import (
@@ -15,20 +16,11 @@ from config import (
 )
 
 SOURCE_FILE_MAPPING = {
-    "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt":
-        "03_Employee_Benefits_Insurance_Guide.pdf",
-
-    "14352e89-df99-465d-9b9d-7d5aafb1f649.txt":
-        "01_Employee_Leave_Time_Off_Handbook.docx",
-
-    "69eed0e6-6881-4b91-8cec-5ba06444c118.txt":
-        "02_Remote_Flexible_Work_Policy.txt",
-
-    "80a04004-bc27-42c8-8a32-ebd6d48ff5a8.txt":
-        "05_HR_Policy_FAQ_Knowledge_Base.csv",
-
-    "ea719f41-412f-468f-a2f2-941f23b17ab3.txt":
-        "04_Workplace_Conduct_Anti_Harassment_Training.pdf",
+    "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt": "03_Employee_Benefits_Insurance_Guide.pdf",
+    "14352e89-df99-465d-9b9d-7d5aafb1f649.txt": "01_Employee_Leave_Time_Off_Handbook.docx",
+    "69eed0e6-6881-4b91-8cec-5ba06444c118.txt": "02_Remote_Flexible_Work_Policy.txt",
+    "80a04004-bc27-42c8-8a32-ebd6d48ff5a8.txt": "05_HR_Policy_FAQ_Knowledge_Base.csv",
+    "ea719f41-412f-468f-a2f2-941f23b17ab3.txt": "04_Workplace_Conduct_Anti_Harassment_Training.pdf",
 }
 
 # create the client to talk to your Azure OpenAI resource. This client is to acces the indexer 1 containing a specific document knowledgebase.pdf
@@ -64,10 +56,7 @@ def format_search_results(results):
         documents.append(
             {
                 "content": result.get("content", ""),
-                "source": SOURCE_FILE_MAPPING.get(
-                    source_file,
-                    source_file
-                ),
+                "source": SOURCE_FILE_MAPPING.get(source_file, source_file),
                 "source_file": source_file,
                 "chunk_id": result.get("chunk_id", ""),
                 "document_id": result.get("document_id", ""),

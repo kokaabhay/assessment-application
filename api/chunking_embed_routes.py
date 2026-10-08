@@ -162,9 +162,7 @@ async def embed_document(document_id: str):
 
     try:
 
-        # ------------------------------------------------
-        # 1. Get processed text from Container 4
-        # ------------------------------------------------
+        # get processed text from container
 
         container_client = blob_service_client.get_container_client(
             AZURE_STORAGE_CONTAINER4
@@ -200,9 +198,7 @@ async def embed_document(document_id: str):
                 detail="Failed to retrieve processed document.",
             )
 
-        # ------------------------------------------------
-        # 2. Validate processed text
-        # ------------------------------------------------
+        # Validate processed text
 
         text = file_content.decode("utf-8").strip()
 
@@ -218,9 +214,7 @@ async def embed_document(document_id: str):
                 detail="Processed document contains no usable text.",
             )
 
-        # ------------------------------------------------
-        # 3. Create chunks
-        # ------------------------------------------------
+        # create chunks
 
         chunks = create_chunks(
             text=text,
@@ -241,9 +235,7 @@ async def embed_document(document_id: str):
             len(chunks),
         )
 
-        # ------------------------------------------------
-        # 4. Generate embeddings
-        # ------------------------------------------------
+        # Generate embeddings
 
         search_documents = []
         failed_chunks = []
@@ -301,9 +293,7 @@ async def embed_document(document_id: str):
             len(search_documents),
         )
 
-        # ------------------------------------------------
-        # 5. Upsert into Azure AI Search
-        # ------------------------------------------------
+        # Upsert into AI search service
 
         try:
 
@@ -323,9 +313,7 @@ async def embed_document(document_id: str):
                 detail="Azure AI Search indexing failed.",
             )
 
-        # ------------------------------------------------
-        # 6. Check indexing results
-        # ------------------------------------------------
+        # check for any indexing failures
 
         indexing_failures = []
 
@@ -349,10 +337,7 @@ async def embed_document(document_id: str):
             len(indexing_failures),
         )
 
-        # ------------------------------------------------
-        # 7. Return summary
-        # ------------------------------------------------
-
+        # return response
         return {
             "status": (
                 "completed"
@@ -384,29 +369,4 @@ async def embed_document(document_id: str):
         raise HTTPException(
             status_code=500,
             detail="Document embedding failed.",
-        )
-
-
-@router2.get("/search/count")
-def search_count():
-
-    try:
-        results = search_client.search(
-            search_text="*",
-            include_total_count=True,
-            top=0,
-        )
-
-        return {
-            "index": AZURE_SEARCH_INDEX_NAME,
-            "document_count": results.get_count(),
-        }
-
-    except Exception as e:
-
-        logger.exception("Failed to check search index")
-
-        raise HTTPException(
-            status_code=500,
-            detail="Unable to check search index.",
         )

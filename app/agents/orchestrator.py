@@ -4,6 +4,7 @@ import json
 from tenacity import retry, wait_fixed, stop_after_attempt
 from openai import OpenAI
 import logging
+
 logger = logging.getLogger(__name__)
 from config import (
     AZURE_CHAT_DEPLOYMENT,

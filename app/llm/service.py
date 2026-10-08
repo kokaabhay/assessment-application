@@ -7,6 +7,7 @@ from config import (
     AZURE_OPENAI_ENDPOINT,
 )
 import logging
+
 logger = logging.getLogger(__name__)
 # create the client to talk to your Azure OpenAI resource.
 client = OpenAI(

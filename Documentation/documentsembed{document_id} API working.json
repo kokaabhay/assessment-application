@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "document_id": "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039",
+  "search_index": "hr-policy-index",
+  "embedding_model": "text-embedding-3-small",
+  "chunk_size": 80,
+  "chunk_overlap": 20,
+  "chunks_created": 89,
+  "chunks_embedded": 89,
+  "chunks_indexed": 89,
+  "embedding_failures": [],
+  "indexing_failures": []
+}
