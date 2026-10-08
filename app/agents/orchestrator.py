@@ -90,73 +90,8 @@ class Orchestrator:
             )
             logger.info("=" * 60)
             return {
-                "documents": "both",
-                "reason": "The orchestrator failed so considering both documents for maximum context",
+                "deployments": "gpt-4.1",
+                "reason": "The orchestrator failed so considering gpt-4.1",
             }
 
 
-# """ from openai import AzureOpenAI
-# import json
-
-# client = AzureOpenAI(
-#     api_key="AZURE_API_KEY",
-#     api_version="2024-10-21",
-#     azure_endpoint="AZURE_ENDPOINT"
-# )
-
-# DEPLOYMENT = "gpt-4.1"
-
-
-# AGENTS = {
-#     "rag_agent": {
-#         "description": "Answers questions using the company's knowledge base."
-#     },
-#     "order_agent": {
-#         "description": "Checks order status and order information."
-#     },
-#     "support_agent": {
-#         "description": "Handles general customer support conversations."
-#     }
-# }
-
-
-# def orchestrate(user_query: str):
-
-#     system_prompt = f"""
-# You are the orchestrator of a customer-support agentic AI system.
-
-# Your job is NOT to answer the user's question directly.
-
-# Your job is to decide which agent should handle the request.
-
-# Available agents:
-
-# {json.dumps(AGENTS, indent=2)}
-
-# Return ONLY valid JSON in this format:
-
-# {{
-#     "agent": "rag_agent",
-#     "reason": "The user is asking about information contained in the knowledge base."
-# }}
-
-# Choose exactly one agent.
-
-# User query:
-# {user_query}
-# """
-
-#     response = client.chat.completions.create(
-#         model=DEPLOYMENT,
-#         messages=[
-#             {
-#                 "role": "system",
-#                 "content": system_prompt
-#             }
-#         ],
-#         temperature=0
-#     )
-
-#     decision = json.loads(response.choices[0].message.content)
-
-#     return decision """
