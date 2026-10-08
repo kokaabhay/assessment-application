@@ -6,6 +6,7 @@ from pypdf import PdfReader
 from docx import Document
 from openpyxl import load_workbook
 
+
 def extract_pdf_text(file_content: bytes) -> str:
     try:
         reader = PdfReader(io.BytesIO(file_content))
@@ -18,16 +19,12 @@ def extract_pdf_text(file_content: bytes) -> str:
                 text_parts.append(text)
         return "\n\n".join(text_parts).strip()
     except Exception as e:
-        raise ValueError(
-            f"Unable to extract text from PDF: {str(e)}"
-        )
+        raise ValueError(f"Unable to extract text from PDF: {str(e)}")
 
 
 def extract_docx_text(file_content: bytes) -> str:
     try:
-        document = Document(
-            io.BytesIO(file_content)
-        )
+        document = Document(io.BytesIO(file_content))
 
         text_parts = []
 
@@ -48,68 +45,42 @@ def extract_docx_text(file_content: bytes) -> str:
         return "\n".join(text_parts).strip()
 
     except Exception as e:
-        raise ValueError(
-            f"Unable to extract text from DOCX: {str(e)}"
-        )
+        raise ValueError(f"Unable to extract text from DOCX: {str(e)}")
 
 
-def extract_text_file(
-    file_content: bytes
-) -> str:
+def extract_text_file(file_content: bytes) -> str:
     try:
-        return file_content.decode(
-            "utf-8"
-        ).strip()
+        return file_content.decode("utf-8").strip()
 
     except UnicodeDecodeError:
         try:
-            return file_content.decode(
-                "utf-8-sig"
-            ).strip()
+            return file_content.decode("utf-8-sig").strip()
 
         except UnicodeDecodeError as e:
-            raise ValueError(
-                "Text file is not valid UTF-8."
-            ) from e
+            raise ValueError("Text file is not valid UTF-8.") from e
 
 
-def extract_csv_text(
-    file_content: bytes
-) -> str:
+def extract_csv_text(file_content: bytes) -> str:
     try:
-        text = file_content.decode(
-            "utf-8-sig"
-        )
+        text = file_content.decode("utf-8-sig")
 
-        reader = csv.reader(
-            io.StringIO(text)
-        )
+        reader = csv.reader(io.StringIO(text))
 
         rows = []
 
         for row in reader:
-            rows.append(
-                " | ".join(
-                    cell.strip()
-                    for cell in row
-                )
-            )
+            rows.append(" | ".join(cell.strip() for cell in row))
 
         return "\n".join(rows).strip()
 
     except UnicodeDecodeError as e:
-        raise ValueError(
-            "CSV file is not valid UTF-8."
-        ) from e
+        raise ValueError("CSV file is not valid UTF-8.") from e
 
     except csv.Error as e:
-        raise ValueError(
-            "CSV file is malformed."
-        ) from e
+        raise ValueError("CSV file is malformed.") from e
 
-def extract_xlsx_text(
-    file_content: bytes
-) -> str:
+
+def extract_xlsx_text(file_content: bytes) -> str:
     try:
         workbook = load_workbook(
             filename=io.BytesIO(file_content),
@@ -121,35 +92,24 @@ def extract_xlsx_text(
 
         for worksheet in workbook.worksheets:
 
-            text_parts.append(
-                f"Sheet: {worksheet.title}"
-            )
+            text_parts.append(f"Sheet: {worksheet.title}")
 
-            for row in worksheet.iter_rows(
-                values_only=True
-            ):
+            for row in worksheet.iter_rows(values_only=True):
                 values = []
 
                 for value in row:
                     if value is not None:
-                        values.append(
-                            str(value).strip()
-                        )
+                        values.append(str(value).strip())
 
                 if values:
-                    text_parts.append(
-                        " | ".join(values)
-                    )
+                    text_parts.append(" | ".join(values))
 
         workbook.close()
 
         return "\n".join(text_parts).strip()
 
     except Exception as e:
-        raise ValueError(
-            f"Unable to extract text from XLSX: {str(e)}"
-        )
-
+        raise ValueError(f"Unable to extract text from XLSX: {str(e)}")
 
 
 def detect_file_type(
@@ -157,11 +117,7 @@ def detect_file_type(
     filename: str,
 ) -> str:
 
-    extension = (
-        Path(filename)
-        .suffix
-        .lower()
-    )
+    extension = Path(filename).suffix.lower()
 
     # PDF signature
     if file_content.startswith(b"%PDF"):
@@ -187,13 +143,10 @@ def detect_file_type(
             file_content.decode("utf-8-sig")
             return extension
         except UnicodeDecodeError:
-            raise ValueError(
-                "File content does not match a valid text encoding."
-            )
+            raise ValueError("File content does not match a valid text encoding.")
 
-    raise ValueError(
-        "Unsupported or unrecognized file format."
-    )
+    raise ValueError("Unsupported or unrecognized file format.")
+
 
 def extract_text(
     file_content: bytes,
@@ -201,31 +154,19 @@ def extract_text(
 ) -> str:
 
     if file_type == ".pdf":
-        return extract_pdf_text(
-            file_content
-        )
+        return extract_pdf_text(file_content)
 
     elif file_type == ".docx":
-        return extract_docx_text(
-            file_content
-        )
+        return extract_docx_text(file_content)
 
     elif file_type in {".txt", ".md"}:
-        return extract_text_file(
-            file_content
-        )
+        return extract_text_file(file_content)
 
     elif file_type == ".csv":
-        return extract_csv_text(
-            file_content
-        )
+        return extract_csv_text(file_content)
 
     elif file_type == ".xlsx":
-        return extract_xlsx_text(
-            file_content
-        )
+        return extract_xlsx_text(file_content)
 
     else:
-        raise ValueError(
-            f"No extractor available for {file_type}"
-        )
+        raise ValueError(f"No extractor available for {file_type}")

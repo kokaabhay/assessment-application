@@ -1,0 +1,102 @@
+REMOTE & FLEXIBLE WORK POLICY - PAGE 1 OF 6
+Northstar Digital Services Pvt. Ltd. | Policy ID: HR-REMOTE-2026 | Effective 15 August 2026
+
+PURPOSE, SCOPE AND DEFINITIONS
+
+The Remote and Flexible Work Policy defines when employees may work away from a company office and the
+controls that apply. It covers hybrid work, temporary remote work, and approved fully remote roles.
+
+Hybrid employee: a role assigned to a company office that may work remotely on approved days. Remote
+employee: a role whose primary work location is outside a company office. Temporary remote work: a time-
+limited arrangement for a specific personal or operational reason.
+
+The standard hybrid model is three office days and up to two remote days each workweek unless the
+business unit publishes a different approved pattern. Team leaders may designate anchor days for
+collaboration.
+
+Metadata: category=remote-work | region=India-default | audience=employees | status=active
+
+REMOTE & FLEXIBLE WORK POLICY - PAGE 2 OF 6
+Northstar Digital Services Pvt. Ltd. | Policy ID: HR-REMOTE-2026 | Effective 15 August 2026
+
+ELIGIBILITY AND APPROVAL
+
+Eligibility depends on job duties, performance, data-access requirements, customer commitments, and the
+employee's ability to work safely and productively away from the office.
+
+Employees under a formal performance improvement plan are not automatically excluded, but remote-work
+requests may be limited when closer coaching or onsite supervision is necessary.
+
+A manager may approve temporary remote work for up to 10 working days. Longer arrangements require People
+Operations approval and, where relevant, Information Security and Tax review.
+
+Metadata: category=remote-work | region=India-default | audience=employees | status=active
+
+REMOTE & FLEXIBLE WORK POLICY - PAGE 3 OF 6
+Northstar Digital Services Pvt. Ltd. | Policy ID: HR-REMOTE-2026 | Effective 15 August 2026
+
+WORKING HOURS, AVAILABILITY AND COMMUNICATION
+
+Employees must remain available during team core hours of 11:00 to 16:00 local time unless the role uses
+shifts or another documented schedule. Flexible start and end times are permitted when coverage and total
+working-hour requirements are met.
+
+Remote work does not change meeting, response-time, or performance expectations. Employees should keep
+calendar status current and use approved communication channels.
+
+Overtime, weekend work, and time-off-in-lieu rules remain unchanged. Employees must not work excessive
+hours merely because they are remote.
+
+Metadata: category=remote-work | region=India-default | audience=employees | status=active
+
+REMOTE & FLEXIBLE WORK POLICY - PAGE 4 OF 6
+Northstar Digital Services Pvt. Ltd. | Policy ID: HR-REMOTE-2026 | Effective 15 August 2026
+
+SECURITY, PRIVACY AND EQUIPMENT
+
+Company-managed devices must be used for confidential work unless an exception is documented. Multi-
+factor authentication, screen lock, endpoint protection, and approved VPN controls must remain enabled.
+
+Employees must avoid discussing confidential information where others can overhear it and must not leave
+sensitive papers unattended in public or shared spaces.
+
+The company may provide a laptop, headset, security key, and one standard external monitor. Loss, theft,
+or suspected compromise must be reported to the service desk and Information Security immediately.
+
+Metadata: category=remote-work | region=India-default | audience=employees | status=active
+
+REMOTE & FLEXIBLE WORK POLICY - PAGE 5 OF 6
+Northstar Digital Services Pvt. Ltd. | Policy ID: HR-REMOTE-2026 | Effective 15 August 2026
+
+TRAVEL, CROSS-BORDER WORK AND EXPENSES
+
+Remote work from another country is not automatically permitted. Any cross-border work request of more
+than five working days must be reviewed in advance for tax, immigration, payroll, employment-law,
+insurance, and information-security implications.
+
+Normal commuting costs are not reimbursable. Pre-approved business travel from the assigned work location
+is reimbursed under the Travel and Expense Policy.
+
+Employees may claim up to INR 1,500 per month for approved home internet costs when their employment
+letter or remote-work addendum explicitly provides the allowance.
+
+Metadata: category=remote-work | region=India-default | audience=employees | status=active
+
+REMOTE & FLEXIBLE WORK POLICY - PAGE 6 OF 6
+Northstar Digital Services Pvt. Ltd. | Policy ID: HR-REMOTE-2026 | Effective 15 August 2026
+
+PERFORMANCE, EXCEPTIONS AND FAQ
+
+Performance is assessed using role outcomes, quality, collaboration, customer impact, reliability, and
+agreed goals rather than physical visibility.
+
+A remote-work arrangement may be changed or withdrawn when business needs, security requirements,
+performance concerns, or regulatory considerations require it. Managers should provide reasonable notice
+except in urgent cases.
+
+FAQ: Can I work from a cafe? Low-risk work may be performed from a cafe if privacy can be maintained;
+confidential calls and sensitive records should not be handled in open public areas. Can I permanently
+move cities? A location change requires written approval because compensation, tax, office assignment,
+and employment terms may be affected.
+
+Metadata: category=remote-work | region=India-default | audience=employees | status=active

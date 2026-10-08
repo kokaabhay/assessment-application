@@ -30,3 +30,6 @@ azure-search-documents
 azure-identity
 tenacity
 black
+pypdf 
+python-docx 
+openpyxl

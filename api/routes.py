@@ -5,7 +5,7 @@ from api.doc_extractors import *
 from pathlib import Path
 import uuid
 import os
-from typing import Optional,List
+from typing import Optional, List
 from pydantic import Field, BaseModel
 from app.llm.query_rewriter import get_rewritten_query
 from app.llm.prompt import build_prompt
@@ -22,20 +22,14 @@ from azure.search.documents.indexes import SearchIndexerClient
 from azure.core.credentials import AzureKeyCredential
 import logging
 
-#Azure Exceptions
+# Azure Exceptions
 from azure.core.exceptions import (
     AzureError,
     ResourceNotFoundError,
 )
+
 logger = logging.getLogger(__name__)
-from config import (
-    AZURE_STORAGE_CONNECTION_STRING,
-    AZURE_STORAGE_CONTAINER3,
-    AZURE_STORAGE_CONTAINER4,
-    AZURE_SEARCH_ENDPOINT,
-    AZURE_SEARCH_API_KEY,
-    AZURE_SEARCH_INDEXER1,
-)
+from config import *
 
 router = APIRouter(tags=["API"])
 
@@ -126,8 +120,8 @@ def response(response_object: Response_Object):
             + rewritten_query
             + "\n\nHypothetical answer:"
             + hypothetical_answer
-            + "\n\nReason: "
-            + decision["reason"]
+            # + "\n\nReason: "
+            # + decision["reason"]
             + " \n\n LLM response is :"
             + answer
         )
@@ -140,18 +134,9 @@ blob_service_client = BlobServiceClient.from_connection_string(
     AZURE_STORAGE_CONNECTION_STRING
 )
 
-# Connect to Azure Search Indexer
-search_indexer_client = SearchIndexerClient(
-    endpoint=AZURE_SEARCH_ENDPOINT,
-    credential=AzureKeyCredential(AZURE_SEARCH_API_KEY),
-)
-
-
 
 @router.post("/documents/upload")
-async def upload_document(
-    files: List[UploadFile] = File(...)
-):
+async def upload_document(files: List[UploadFile] = File(...)):
     allowed_extensions = {
         ".pdf",
         ".docx",
@@ -190,9 +175,7 @@ async def upload_document(
         if extension not in allowed_extensions:
             raise HTTPException(
                 status_code=400,
-                detail=(
-                    f"File '{original_filename}' is not supported."
-                ),
+                detail=(f"File '{original_filename}' is not supported."),
             )
 
         # Generate a unique document ID
@@ -230,13 +213,15 @@ async def upload_document(
                 "Blob uploaded successfully: %s",
                 blob_client.url,
             )
-            #search_indexer_client.run_indexer(AZURE_SEARCH_INDEXER1)
-            uploaded_files.append({
-                "document_id": document_id,
-                "blob_name": blob_name,
-                "filename": original_filename,
-                "url": blob_client.url,
-            })
+            # search_indexer_client.run_indexer(AZURE_SEARCH_INDEXER1)
+            uploaded_files.append(
+                {
+                    "document_id": document_id,
+                    "blob_name": blob_name,
+                    "filename": original_filename,
+                    "url": blob_client.url,
+                }
+            )
 
         except HTTPException:
             raise
@@ -258,12 +243,9 @@ async def upload_document(
         "files": uploaded_files,
     }
 
-@router.post(
-    "/documents/process/{document_id}"
-)
-async def process_document(
-    document_id: str
-):
+
+@router.post("/documents/process/{document_id}")
+async def process_document(document_id: str):
     """
     Retrieve a document from Blob Container 3,
     extract its text, and store the extracted
@@ -271,8 +253,7 @@ async def process_document(
     """
 
     logger.info(
-        "Document processing request received | "
-        "document_id=%s",
+        "Document processing request received | " "document_id=%s",
         document_id,
     )
 
@@ -284,36 +265,25 @@ async def process_document(
 
     try:
 
-         #Get the source container  
-        source_container_client = (
-            blob_service_client.get_container_client(
-                AZURE_STORAGE_CONTAINER3
-            )
+        # Get the source container
+        source_container_client = blob_service_client.get_container_client(
+            AZURE_STORAGE_CONTAINER3
         )
 
-        # Get the output container        
-        output_container_client = (
-            blob_service_client.get_container_client(
-                AZURE_STORAGE_CONTAINER4
-            )
+        # Get the output container
+        output_container_client = blob_service_client.get_container_client(
+            AZURE_STORAGE_CONTAINER4
         )
 
-     
-        #Find the source blob    
+        # Find the source blob
         source_blob_name = None
 
         logger.info(
-            "Searching source blob | "
-            "document_id=%s",
+            "Searching source blob | " "document_id=%s",
             document_id,
         )
 
-        blobs = (
-            source_container_client
-            .list_blobs(
-                name_starts_with=document_id
-            )
-        )
+        blobs = source_container_client.list_blobs(name_starts_with=document_id)
 
         for blob in blobs:
             source_blob_name = blob.name
@@ -321,8 +291,7 @@ async def process_document(
 
         if not source_blob_name:
             logger.warning(
-                "Source blob not found | "
-                "document_id=%s",
+                "Source blob not found | " "document_id=%s",
                 document_id,
             )
 
@@ -332,34 +301,21 @@ async def process_document(
             )
 
         logger.info(
-            "Source blob found | "
-            "document_id=%s | blob=%s",
+            "Source blob found | " "document_id=%s | blob=%s",
             document_id,
             source_blob_name,
         )
 
-        
-        #Download the source blob
-       
+        # Download the source blob
 
-        source_blob_client = (
-            source_container_client
-            .get_blob_client(
-                source_blob_name
-            )
-        )
+        source_blob_client = source_container_client.get_blob_client(source_blob_name)
 
         try:
-            file_content = (
-                source_blob_client
-                .download_blob()
-                .readall()
-            )
+            file_content = source_blob_client.download_blob().readall()
 
         except ResourceNotFoundError:
             logger.warning(
-                "Source blob disappeared during "
-                "processing | document_id=%s",
+                "Source blob disappeared during " "processing | document_id=%s",
                 document_id,
             )
 
@@ -370,8 +326,7 @@ async def process_document(
 
         except AzureError:
             logger.exception(
-                "Azure Blob Storage retrieval failed | "
-                "document_id=%s",
+                "Azure Blob Storage retrieval failed | " "document_id=%s",
                 document_id,
             )
 
@@ -380,14 +335,11 @@ async def process_document(
                 detail="Unable to retrieve document from storage.",
             )
 
-        
-         # Validate if there is empty document
-        
+        # Validate if there is empty document
 
         if not file_content:
             logger.warning(
-                "Empty document | "
-                "document_id=%s",
+                "Empty document | " "document_id=%s",
                 document_id,
             )
             raise HTTPException(
@@ -395,10 +347,8 @@ async def process_document(
                 detail="The uploaded document is empty.",
             )
 
-        #Detect the file type
-        original_filename = (
-            Path(source_blob_name).name
-        )
+        # Detect the file type
+        original_filename = Path(source_blob_name).name
         try:
             file_type = detect_file_type(
                 file_content,
@@ -406,8 +356,7 @@ async def process_document(
             )
         except ValueError as e:
             logger.warning(
-                "Unsupported document type | "
-                "document_id=%s | reason=%s",
+                "Unsupported document type | " "document_id=%s | reason=%s",
                 document_id,
                 str(e),
             )
@@ -416,16 +365,14 @@ async def process_document(
                 detail="Unsupported or invalid document format.",
             )
         logger.info(
-            "Document type detected | "
-            "document_id=%s | type=%s",
+            "Document type detected | " "document_id=%s | type=%s",
             document_id,
             file_type,
         )
 
         # Extract the text
         logger.info(
-            "Text extraction started | "
-            "document_id=%s | type=%s",
+            "Text extraction started | " "document_id=%s | type=%s",
             document_id,
             file_type,
         )
@@ -440,8 +387,7 @@ async def process_document(
         except ValueError as e:
 
             logger.warning(
-                "Document extraction failed | "
-                "document_id=%s | reason=%s",
+                "Document extraction failed | " "document_id=%s | reason=%s",
                 document_id,
                 str(e),
             )
@@ -449,16 +395,14 @@ async def process_document(
             raise HTTPException(
                 status_code=422,
                 detail=(
-                    "The document is malformed, "
-                    "corrupted, or could not be read."
+                    "The document is malformed, " "corrupted, or could not be read."
                 ),
             )
 
         except Exception:
 
             logger.exception(
-                "Unexpected extraction failure | "
-                "document_id=%s",
+                "Unexpected extraction failure | " "document_id=%s",
                 document_id,
             )
 
@@ -471,8 +415,7 @@ async def process_document(
 
         if not extracted_text.strip():
             logger.warning(
-                "No meaningful text extracted | "
-                "document_id=%s",
+                "No meaningful text extracted | " "document_id=%s",
                 document_id,
             )
             raise HTTPException(
@@ -484,28 +427,19 @@ async def process_document(
             )
 
         logger.info(
-            "Text extraction completed | "
-            "document_id=%s | characters=%d",
+            "Text extraction completed | " "document_id=%s | characters=%d",
             document_id,
             len(extracted_text),
         )
 
-        #create the output blob name
-        output_blob_name = (
-            f"{document_id}.txt"
-        )
+        # create the output blob name
+        output_blob_name = f"{document_id}.txt"
 
-        output_blob_client = (
-            output_container_client
-            .get_blob_client(
-                output_blob_name
-            )
-        )
+        output_blob_client = output_container_client.get_blob_client(output_blob_name)
 
-        #store Extracted text
+        # store Extracted text
         logger.info(
-            "Saving extracted text | "
-            "document_id=%s | output_blob=%s",
+            "Saving extracted text | " "document_id=%s | output_blob=%s",
             document_id,
             output_blob_name,
         )
@@ -518,20 +452,16 @@ async def process_document(
 
         except AzureError:
             logger.exception(
-                "Failed to store extracted text | "
-                "document_id=%s",
+                "Failed to store extracted text | " "document_id=%s",
                 document_id,
             )
 
             raise HTTPException(
                 status_code=502,
-                detail=(
-                    "Failed to store extracted text "
-                    "in Blob Storage."
-                ),
+                detail=("Failed to store extracted text " "in Blob Storage."),
             )
 
-        #log completion
+        # log completion
         logger.info(
             "Document processing completed successfully | "
             "document_id=%s | output_blob=%s",
@@ -546,8 +476,7 @@ async def process_document(
             "output_container": AZURE_STORAGE_CONTAINER4,
             "extracted_text_blob": output_blob_name,
             "message": (
-                "Document processed successfully "
-                "and extracted text was stored."
+                "Document processed successfully " "and extracted text was stored."
             ),
         }
 
@@ -557,8 +486,7 @@ async def process_document(
     except AzureError:
 
         logger.exception(
-            "Azure Storage error | "
-            "document_id=%s",
+            "Azure Storage error | " "document_id=%s",
             document_id,
         )
 
@@ -570,8 +498,7 @@ async def process_document(
     except Exception:
 
         logger.exception(
-            "Unexpected document processing error | "
-            "document_id=%s",
+            "Unexpected document processing error | " "document_id=%s",
             document_id,
         )
 
