@@ -52,10 +52,7 @@ def get_answer(prompt: str, d) -> str:
         logger.info("=" * 60)
 
         return (
-            "OOOPS! Sorry, our customer support agent is currently "
-            "unavailable at the moment.\n\n"
-            "To talk to SmartHome Hub customer support, please dial "
-            "to +91 xxxxxxxxxx or mail us at "
-            "customersupport@smarthome.com. "
+            "OOOPS! Sorry, our  support agent is currently "
+            "unavailable at the moment.\n\n"            
             "We apologise for the inconvenience caused."
         )
