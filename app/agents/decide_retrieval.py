@@ -51,10 +51,10 @@ def decide_retrieve(prompt: str) -> bool:
         ],
         temperature=0,
     )
-    
+
     result = response.choices[0].message.content.strip()
-    if result not in ["None","False","True"]:
-        logger.error(result,"Invalid response proceeding for retrieval")
+    if result not in ["None", "False", "True"]:
+        logger.error(result, "Invalid response proceeding for retrieval")
         return "True"
     return result
 

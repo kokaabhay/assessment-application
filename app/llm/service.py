@@ -53,6 +53,6 @@ def get_answer(prompt: str, d) -> str:
 
         return (
             "OOOPS! Sorry, our  support agent is currently "
-            "unavailable at the moment.\n\n"            
+            "unavailable at the moment.\n\n"
             "We apologise for the inconvenience caused."
         )

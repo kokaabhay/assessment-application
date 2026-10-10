@@ -97,7 +97,6 @@ def response(response_object: Response_Object):
         )
 
         # context_h_documents=build_context(reranked_h_documents)
-    
 
         prompt = build_prompt(
             query=query,
@@ -105,33 +104,33 @@ def response(response_object: Response_Object):
             h_documents=reranked_h_documents,
         )
 
-        answer = get_answer(prompt, decision["deployment"] if k else "gpt-4.1")
+        answer = get_answer(prompt, decision["deployment"])
         logger.info(decision["deployment"], decision["reason"])
         logger.info("\n" + "=" * 60)
         logger.info("FINAL ANSWER")
         logger.info("=" * 60)
         logger.info(answer)
-        
+
         return (
-                "Re-written query is : "
-                + rewritten_query
-                + "\n\nHypothetical answer:"
-                + hypothetical_answer
-                + "\n\nReason: "
-                + decision["deployment"]
-                + decision["reason"]
-                + " \n\n LLM response is :"
-                + answer
-            )
+            "Re-written query is : "
+            + rewritten_query
+            + "\n\nHypothetical answer:"
+            + hypothetical_answer
+            + "\n\nReason: "
+            + decision["deployment"]
+            + decision["reason"]
+            + " \n\n LLM response is :"
+            + answer
+        )
     else:
-        context_documents=[]
-        reranked_h_documents=[]
+        context_documents = []
+        reranked_h_documents = []
         prompt = build_prompt(
-                    query=query,
-                    documents=context_documents,
-                    h_documents=reranked_h_documents,
-                )
-        
+            query=query,
+            documents=context_documents,
+            h_documents=reranked_h_documents,
+        )
+
         answer = get_answer(prompt, decision["deployment"] if k else "gpt-4.1")
         return " \n\n LLM response is :" + answer
 
