@@ -75,7 +75,7 @@ async def chunk_document(document_id: str):
             AZURE_STORAGE_CONTAINER4
         ).get_blob_client(f"{document_id}.txt")
 
-        # Fetch processed text
+        # Fetch the processed text
         try:
 
             text = blob_client.download_blob().readall().decode("utf-8")

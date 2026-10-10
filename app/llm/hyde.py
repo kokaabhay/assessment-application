@@ -8,14 +8,13 @@ from config import (
 import logging
 
 logger = logging.getLogger(__name__)
-# create the client to talk to your Azure OpenAI resource.
+
 client = OpenAI(
     base_url=f"{AZURE_OPENAI_ENDPOINT.rstrip('/')}/openai/v1/",
     api_key=AZURE_OPENAI_API_KEY,
 )
 
 
-# Generate a hypothetical answer and then use this answer for better quality retrieval only based on vector search
 def generate_hypothetical_answer(rewritten_query: str, query: str) -> str:
     """
     Generate a hypothetical answer to the user's question into a concise search reference
@@ -47,7 +46,6 @@ def generate_hypothetical_answer(rewritten_query: str, query: str) -> str:
     return hypothetical_answer
 
 
-# This function will call the generate_hypothetical_answer function and in case of failure ensures a working fallback
 def get_hypothetical_answer(rewritten_query: str, query) -> str:
     try:
         return generate_hypothetical_answer(rewritten_query, query)

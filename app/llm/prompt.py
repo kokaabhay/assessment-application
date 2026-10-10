@@ -4,12 +4,9 @@ from typing import Optional
 from config import MAX_CONTEXT_TOKENS
 from langchain_core.prompts import PromptTemplate
 
-# cl100k_base is a tokenizer commonly associated with OpenAI
-# create tokenizer using tiktoken
 encoding = tiktoken.get_encoding("cl100k_base")
 
 
-# This function controls how much retrieved text is allowed into the LLM context.
 def build_context(documents: list[dict]) -> list[dict]:
 
     selected_documents = []

@@ -10,14 +10,12 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-# create the client to talk to your Azure OpenAI resource.
 client = OpenAI(
     base_url=f"{AZURE_OPENAI_ENDPOINT.rstrip('/')}/openai/v1/",
     api_key=AZURE_OPENAI_API_KEY,
 )
 
 
-# This function returns a bool True/False whether retrieval is necessary or not required on the first place based on the user query
 def decide_retrieve(prompt: str) -> bool:
     response = client.chat.completions.create(
         model=AZURE_CHAT_DEPLOYMENT,
@@ -59,7 +57,6 @@ def decide_retrieve(prompt: str) -> bool:
     return result
 
 
-# This function will call the decide_retrieve function and in case of failure ensures a working fallback
 # print(type(bool(decide_retrieve("I need a product...ans also calcium is not healthy for body...i want to buy calicum"))))
 def get_retrieval_decision(prompt: str) -> bool:
     try:

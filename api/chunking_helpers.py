@@ -1,5 +1,4 @@
 import re
-import hashlib
 from config import CHUNK_SIZE, CHUNK_OVERLAP
 
 
@@ -7,7 +6,7 @@ def create_chunks(
     text: str,
     document_id: str,
     source_file: str,
-):
+) -> list[dict]:
     paragraphs = re.split(r"\n\s*\n", text.strip())
 
     chunks = []

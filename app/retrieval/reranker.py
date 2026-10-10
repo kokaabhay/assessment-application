@@ -10,7 +10,6 @@ from config import (
     AZURE_RERANK_DEPLOYMENT,
 )
 
-# create http client
 http_client = httpx.Client(
     verify=False,
     timeout=60.0,
@@ -19,7 +18,6 @@ http_client = httpx.Client(
 # print("Reranker endpoint:", repr(AZURE_RERANK_ENDPOINT))
 
 
-# This function uses cohere reranker for reranking candidate documents sent by hybrid search an hyde retrieval
 def rerank_documents(
     query: str,
     documents: list[dict],

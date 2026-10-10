@@ -9,14 +9,13 @@ import logging
 from langchain_core.prompts import PromptTemplate
 
 logger = logging.getLogger(__name__)
-# create the client to talk to your Azure OpenAI resource.
+
 client = OpenAI(
     base_url=f"{AZURE_OPENAI_ENDPOINT.rstrip('/')}/openai/v1/",
     api_key=AZURE_OPENAI_API_KEY,
 )
 
 
-# Generates the final LLM Response to be replied to the end user asking the question
 def generate_answer(prompt: str, d) -> str:
 
     response = client.chat.completions.create(
@@ -39,7 +38,6 @@ def generate_answer(prompt: str, d) -> str:
     return response.choices[0].message.content.strip()
 
 
-# This function will call the generate_answer function and in case of failure ensures a working fallback
 def get_answer(prompt: str, d) -> str:
     try:
         return generate_answer(prompt, d)

@@ -10,14 +10,12 @@ from config import (
     AZURE_OPENAI_ENDPOINT,
 )
 
-# create the client to talk to your Azure OpenAI resource.
 client = OpenAI(
     base_url=f"{AZURE_OPENAI_ENDPOINT.rstrip('/')}/openai/v1/",
     api_key=AZURE_OPENAI_API_KEY,
 )
 
 
-# This function rewites the user query for better vector / keyword based retrieval
 def rewrite_query(query: str) -> str:
     """
     Rewrite a user's question into a concise search query
@@ -47,7 +45,6 @@ def rewrite_query(query: str) -> str:
     return rewritten_query
 
 
-# This function will call the rewrite_query function and in case of failure ensures a working fallback
 def get_rewritten_query(query: str) -> str:
     try:
         return rewrite_query(query)
