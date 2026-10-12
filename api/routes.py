@@ -185,7 +185,7 @@ async def upload_document(files: List[UploadFile] = File(...)):
         document_id = str(uuid.uuid4())
 
         # Unique blob name
-        blob_name = f"{document_id}{extension}"
+        blob_name = f"policy_documents/{document_id}{extension}"
 
         try:
             logger.info(
@@ -273,26 +273,32 @@ async def process_document(document_id: str):
         )
 
         output_container_client = blob_service_client.get_container_client(
-            AZURE_STORAGE_CONTAINER4
+            AZURE_STORAGE_CONTAINER3
         )
 
-        # Find the source blob
-        source_blob_name = None
+        # Find the source blob inside policy_documents/
+        source_blob_name = f"policy_documents/{document_id}"
 
         logger.info(
-            "Searching source blob | " "document_id=%s",
+            "Searching source blob | document_id=%s",
             document_id,
         )
 
-        blobs = source_container_client.list_blobs(name_starts_with=document_id)
+        # Find the file by its document ID and extension
+        blobs = source_container_client.list_blobs(name_starts_with=source_blob_name)
+
+        source_blob_name = None
 
         for blob in blobs:
-            source_blob_name = blob.name
-            break
+            # Ensure the blob belongs to this document ID
+            # and has a file extension after the ID
+            if blob.name.startswith(f"policy_documents/{document_id}."):
+                source_blob_name = blob.name
+                break
 
         if not source_blob_name:
             logger.warning(
-                "Source blob not found | " "document_id=%s",
+                "Source blob not found | document_id=%s",
                 document_id,
             )
 
@@ -302,13 +308,12 @@ async def process_document(document_id: str):
             )
 
         logger.info(
-            "Source blob found | " "document_id=%s | blob=%s",
+            "Source blob found | document_id=%s | blob=%s",
             document_id,
             source_blob_name,
         )
 
         # Download the source blob
-
         source_blob_client = source_container_client.get_blob_client(source_blob_name)
 
         try:
@@ -435,7 +440,7 @@ async def process_document(document_id: str):
         )
 
         # create the output blob name
-        output_blob_name = f"{document_id}.txt"
+        output_blob_name = f"extracted_text/{document_id}.txt"
 
         output_blob_client = output_container_client.get_blob_client(output_blob_name)
 
@@ -475,7 +480,7 @@ async def process_document(document_id: str):
             "status": "completed",
             "document_id": document_id,
             "source_blob": source_blob_name,
-            "output_container": AZURE_STORAGE_CONTAINER4,
+            "output_container": AZURE_STORAGE_CONTAINER3,
             "extracted_text_blob": output_blob_name,
             "message": (
                 "Document processed successfully " "and extracted text was stored."

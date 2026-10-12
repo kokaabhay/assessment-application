@@ -16,11 +16,11 @@ from config import (
 )
 
 SOURCE_FILE_MAPPING = {
-    "0b07bef3-cef5-4c50-bc2b-6f2bc06bf039.txt": "03_Employee_Benefits_Insurance_Guide.pdf",
-    "14352e89-df99-465d-9b9d-7d5aafb1f649.txt": "01_Employee_Leave_Time_Off_Handbook.docx",
-    "69eed0e6-6881-4b91-8cec-5ba06444c118.txt": "02_Remote_Flexible_Work_Policy.txt",
-    "80a04004-bc27-42c8-8a32-ebd6d48ff5a8.txt": "05_HR_Policy_FAQ_Knowledge_Base.csv",
-    "ea719f41-412f-468f-a2f2-941f23b17ab3.txt": "04_Workplace_Conduct_Anti_Harassment_Training.pdf",
+    "policy_documents/3ce91453-506b-4595-b4eb-06b1b5eaeef8.txt": "03_Employee_Benefits_Insurance_Guide.pdf",
+    "policy_documents/22ed141c-4e7f-426b-bd33-a38b2520817d.txt": "01_Employee_Leave_Time_Off_Handbook.docx",
+    "policy_documents/a7c1253f-afa4-4acf-825c-d6b2715f09c6.txt": "02_Remote_Flexible_Work_Policy.txt",
+    "policy_documents/8f2f898f-acc6-486f-b2c8-c5da21dfd984.txt": "05_HR_Policy_FAQ_Knowledge_Base.csv",
+    "policy_documents/287679bd-fe7c-427f-bd68-26ade8c16f3c.txt": "04_Workplace_Conduct_Anti_Harassment_Training.pdf",
 }
 
 

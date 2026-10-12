@@ -61,8 +61,8 @@ async def chunk_document(document_id: str):
     try:
 
         blob_client = blob_service_client.get_container_client(
-            AZURE_STORAGE_CONTAINER4
-        ).get_blob_client(f"{document_id}.txt")
+            AZURE_STORAGE_CONTAINER3
+        ).get_blob_client(f"extracted_text/{document_id}.txt")
 
         # Fetch the processed text
         try:
@@ -100,7 +100,7 @@ async def chunk_document(document_id: str):
         chunks = create_chunks(
             text=text,
             document_id=document_id,
-            source_file=f"{document_id}.txt",
+            source_file=f"extracted_text/{document_id}.txt",
         )
 
         logger.info(
@@ -154,10 +154,12 @@ async def embed_document(document_id: str):
         # get processed text from container
 
         container_client = blob_service_client.get_container_client(
-            AZURE_STORAGE_CONTAINER4
+            AZURE_STORAGE_CONTAINER3
         )
 
-        blob_client = container_client.get_blob_client(f"{document_id}.txt")
+        blob_client = container_client.get_blob_client(
+            f"extracted_text/{document_id}.txt"
+        )
 
         try:
 
@@ -208,7 +210,7 @@ async def embed_document(document_id: str):
         chunks = create_chunks(
             text=text,
             document_id=document_id,
-            source_file=f"{document_id}.txt",
+            source_file=f"policy_documents/{document_id}.txt",
         )
 
         if not chunks:
