@@ -19,8 +19,6 @@ from azure.core.exceptions import (
 
 logger = logging.getLogger(__name__)
 from config import *
-from azure.search.documents.indexes import SearchIndexerClient
-from azure.core.credentials import AzureKeyCredential
 
 search_index_client = SearchIndexClient(
     endpoint=AZURE_SEARCH_ENDPOINT,

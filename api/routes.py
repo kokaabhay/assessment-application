@@ -6,7 +6,6 @@ from pathlib import Path
 import uuid
 import os
 from typing import Optional, List
-from pydantic import Field, BaseModel
 from app.llm.query_rewriter import get_rewritten_query
 from app.llm.prompt import build_prompt
 from app.llm.service import get_answer
@@ -18,8 +17,6 @@ from app.llm.hyde import get_hypothetical_answer
 from app.agents.decide_retrieval import get_retrieval_decision
 from app.agents.orchestrator import Orchestrator
 from azure.storage.blob import BlobServiceClient
-from azure.search.documents.indexes import SearchIndexerClient
-from azure.core.credentials import AzureKeyCredential
 import logging
 
 # Azure Exceptions
@@ -219,7 +216,7 @@ async def upload_document(files: List[UploadFile] = File(...)):
                 "Blob uploaded successfully: %s",
                 blob_client.url,
             )
-            # search_indexer_client.run_indexer(AZURE_SEARCH_INDEXER1)
+
             uploaded_files.append(
                 {
                     "document_id": document_id,
@@ -271,12 +268,10 @@ async def process_document(document_id: str):
 
     try:
 
-        # Get the source container
         source_container_client = blob_service_client.get_container_client(
             AZURE_STORAGE_CONTAINER3
         )
 
-        # Get the output container
         output_container_client = blob_service_client.get_container_client(
             AZURE_STORAGE_CONTAINER4
         )
@@ -317,7 +312,8 @@ async def process_document(document_id: str):
         source_blob_client = source_container_client.get_blob_client(source_blob_name)
 
         try:
-            file_content = source_blob_client.download_blob().readall()
+            file_content = source_blob_client.download_blob().readall()  # Bytes output
+            # print(file_content)
 
         except ResourceNotFoundError:
             logger.warning(
