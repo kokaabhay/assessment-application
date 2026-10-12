@@ -2,22 +2,13 @@ from fastapi import FastAPI, HTTPException, APIRouter, UploadFile, File
 from azure.search.documents import SearchClient
 from openai import AzureOpenAI
 from azure.search.documents.indexes import SearchIndexClient
-from azure.search.documents.indexes.models import (
-    SearchIndex,
-    SearchField,
-    SearchFieldDataType,
-    SimpleField,
-    SearchableField,
-    VectorSearch,
-    HnswAlgorithmConfiguration,
-    VectorSearchProfile,
-)
+
 from api.doc_extractors import *
 from api.chunking_helpers import *
 import os
 import logging
 from azure.storage.blob import BlobServiceClient
-from azure.search.documents.indexes import SearchIndexerClient
+
 from azure.core.credentials import AzureKeyCredential
 
 # Azure Exceptions
