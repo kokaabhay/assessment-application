@@ -16,7 +16,7 @@ client = OpenAI(
 )
 
 
-def decide_retrieve(prompt: str) -> bool:
+def decide_retrieve(prompt: str) -> str:
     response = client.chat.completions.create(
         model=AZURE_CHAT_DEPLOYMENT,
         messages=[
