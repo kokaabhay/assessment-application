@@ -5,6 +5,7 @@ from pathlib import Path
 from pypdf import PdfReader
 from docx import Document
 from openpyxl import load_workbook
+import pandas as pd
 
 
 def extract_pdf_text(file_content: bytes) -> str:

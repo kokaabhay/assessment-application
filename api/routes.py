@@ -127,8 +127,8 @@ def response(response_object: Response_Object):
             documents=context_documents,
             h_documents=reranked_h_documents,
         )
-
-        answer = get_answer(prompt, decision["deployment"] if k else "gpt-4.1")
+        decision["deployment"] = "gpt-4.1"
+        answer = get_answer(prompt, decision["deployment"])
         return " \n\n LLM response is :" + answer
 
 
