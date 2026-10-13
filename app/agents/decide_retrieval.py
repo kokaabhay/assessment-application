@@ -58,7 +58,7 @@ def decide_retrieve(prompt: str) -> str:
 
 
 # print(type(bool(decide_retrieve("I need a product...ans also calcium is not healthy for body...i want to buy calicum"))))
-def get_retrieval_decision(prompt: str) -> bool:
+def get_retrieval_decision(prompt: str) -> str:
     try:
         return decide_retrieve(prompt)
     except Exception as e:
@@ -69,4 +69,4 @@ def get_retrieval_decision(prompt: str) -> bool:
         logger.error("=" * 60)
         logger.info("Proceeding initiate retrieval process by default")
         logger.info("=" * 60)
-        return True
+        return "True"
